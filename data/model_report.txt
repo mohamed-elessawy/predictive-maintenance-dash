@@ -1,0 +1,33 @@
+
+PREDICTIVE MAINTENANCE MODEL - SUMMARY REPORT
+============================================================
+
+DATASET INFO:
+- Total samples: 10000
+- Total features: 16
+- Training samples: 8000
+- Test samples: 2000
+
+CLASS IMBALANCE:
+- Original ratio (Failure:No Failure): 339:9661
+- Imbalance ratio: 28.50x
+- Handled with: SMOTE (sampling_strategy=0.35) + class_weight='balanced'
+
+MODEL PERFORMANCE:
+- Algorithm: Random Forest Classifier
+- Test Set ROC-AUC: 0.9946
+- Training Set ROC-AUC: 1.0000
+
+TOP 5 FEATURES:
+               Feature  Importance
+Rotational speed [rpm]    0.125933
+                 Power    0.125461
+                   PWF    0.115900
+           Torque [Nm]    0.108814
+                   HDF    0.087086
+
+ARTIFACTS SAVED:
+- Model: data/model_weights.pkl
+- Scaler: data/scaler.pkl
+- Features: data/feature_names.pkl
+- Feature Importance: data/feature_importance.pkl
